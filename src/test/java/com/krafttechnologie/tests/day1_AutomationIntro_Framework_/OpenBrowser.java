@@ -5,6 +5,7 @@ package com.krafttechnologie.tests.day1_AutomationIntro_Framework_;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class OpenBrowser {
     public static void main(String[] args) {
@@ -14,8 +15,7 @@ public class OpenBrowser {
         3-nesneme testini yapacagımız web sayfasına beni goturmesini isteyecegiz.
 
          */
-//        WebDriverManager.firefoxdriver().setup();
-//        WebDriver driver=new FirefoxDriver();
+
 
         WebDriverManager.chromedriver().setup();
 
