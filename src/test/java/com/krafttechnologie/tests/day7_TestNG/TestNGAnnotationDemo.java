@@ -29,6 +29,7 @@ public class TestNGAnnotationDemo {
         System.out.println("Second Test Assertion");
         Assert.assertEquals("test2","test2");
 
+
     }
     @Test
     public void test3(){

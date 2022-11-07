@@ -25,7 +25,11 @@ public class Calisma_1 {
         WebElement serb= driver.findElement(By.cssSelector("#search-icon-legacy"));
         serb.click();
 
-        driver.findElement(By.xpath("(//img[@class='style-scope yt-img-shadow'])[1]")).click();
+      //  driver.findElement(By.xpath("(//a/yt-icon[@id='inline-title-icon'])[1]")).click();
+
+     //   driver.findElement(By.cssSelector("a[title='Reynmen ft. Zeynep Bastık - Yalan ( Official Video )']")).click();
+
+        driver.findElement(By.xpath("//a/yt-icon[@id='inline-title-icon'][1]")).click();
 
 
 
