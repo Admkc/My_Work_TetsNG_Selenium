@@ -14,26 +14,32 @@ import java.time.Duration;
 
 public class Calisma_1 {
     public static void main(String[] args) throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver=new ChromeDriver();
-        driver.get("https://www.youtube.com");
-        driver.manage().window().maximize();
 
-        WebElement sear= driver.findElement(By.xpath("//input[@name='search_query']"));
-        sear.sendKeys("yalan yalan");
+            WebDriverManager.chromedriver().setup();
+            WebDriver driver=new ChromeDriver();
+            driver.get("https://www.youtube.com");
+                    driver.manage().window().maximize();
 
-        WebElement serb= driver.findElement(By.cssSelector("#search-icon-legacy"));
-        serb.click();
 
-      //  driver.findElement(By.xpath("(//a/yt-icon[@id='inline-title-icon'])[1]")).click();
 
-     //   driver.findElement(By.cssSelector("a[title='Reynmen ft. Zeynep Bastık - Yalan ( Official Video )']")).click();
+            driver.findElement(By.xpath("//div[@class='style-scope ytd-searchbox' and @id='container']")).click();
 
-        driver.findElement(By.xpath("//a/yt-icon[@id='inline-title-icon'][1]")).click();
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("//input[@id='search']")).sendKeys("ahmet kaya");
 
+            Thread.sleep(2000);
+
+            driver.findElement(By.xpath("//button[@id='search-icon-legacy']")).click();
+
+            Thread.sleep(5000);
+
+            driver.findElement(By.xpath("(//div[@id='dismissible' and @class='style-scope ytd-video-renderer'])[1]")).click();
+
+        }
 
 
     }
-       }
+
+
 
 
