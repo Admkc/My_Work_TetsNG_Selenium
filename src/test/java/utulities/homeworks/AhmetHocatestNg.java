@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class AhmetHocatestNg {
 
-    /** task: 1   //test 1  de yapıldı
+    /* task: 1   //test 1  de yapıldı
      1.	https://www.krafttechexlab.com/Links to an external site. sayfasina git
      2.	Components module git
      3.	Alert segmesini ac

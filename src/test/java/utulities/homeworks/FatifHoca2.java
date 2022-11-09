@@ -38,6 +38,7 @@ public class FatifHoca2 {
     @AfterMethod
     public void afterMtd(){
         System.out.println("after method");
+
     }
 
     @Test
@@ -124,20 +125,7 @@ public class FatifHoca2 {
         Thread.sleep(1000);
 
         driver.findElement(By.id("remove-sauce-labs-backpack")).click();
-
         driver.close();
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

@@ -16,29 +16,36 @@ public class karalama {
 
     WebDriver driver;
 
-
     @BeforeMethod
     public void setUp(){
         driver= WebDriverFactory.getDriver("chrome");
+
         driver.manage().window().maximize();
+
     }
     @AfterMethod
     public void tearDown(){
         driver.close();
-
     }
     @Test
     public void test(){
-        driver.get("https://demoqa.com/radio-button");
-        WebElement yesBtn=driver.findElement(By.cssSelector("#yesRadio"));
+        driver.get("https://www.krafttechexlab.com/javascript/clicks");
 
-        System.out.println("yesBtn.getAttribute(\"type\") = " + yesBtn.getAttribute("type"));
-        System.out.println("yesBtn.getAttribute(\"name\") = " + yesBtn.getAttribute("name"));
+        List<WebElement> buttons=driver.findElements(By.xpath("//button[@class='btn btn-primary']"));
 
-        System.out.println("yesBtn.getAttribute(\"class\") = " + yesBtn.getAttribute("class"));
+        System.out.println("buttons.size() = " + buttons.size());
+        Assert.assertEquals(buttons.size(),4);
 
-        System.out.println("yesBtn.getAttribute(\"for\") = " + yesBtn.getAttribute("for"));
+        for (WebElement btn:buttons){
+            System.out.println("btn.getText() = " + btn.getText());
+            System.out.println("btn.isDisplayed() = " + btn.isDisplayed());
+        }
+
+
+
 
 
     }
+
+
 }

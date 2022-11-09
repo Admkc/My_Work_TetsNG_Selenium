@@ -11,7 +11,13 @@ import utulities.WebDriverFactory;
 
 import javax.swing.*;
 import java.time.Duration;
+/**
 
+
+jh
+gdfhgmldmhdlhşgjnmfj
+
+*/
 public class Calisma_1 {
     public static void main(String[] args) throws InterruptedException {
 
