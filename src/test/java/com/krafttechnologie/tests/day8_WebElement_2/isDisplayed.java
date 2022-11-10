@@ -12,7 +12,7 @@ import utulities.WebDriverFactory;
 
 public class isDisplayed {
 
-    //web element kutusu var mı, yeri var mı,web eleemnt gözüküyor mu
+    //web element kutusu var mı, yeri var mı,web element gözüküyor mu
 
    WebDriver driver;
 

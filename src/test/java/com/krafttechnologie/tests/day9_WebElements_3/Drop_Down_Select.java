@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day_9_WebElements_3;
+package com.krafttechnologie.tests.day9_WebElements_3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +31,8 @@ public class Drop_Down_Select {
     @Test
     public void test() throws InterruptedException {
         driver.get("https://demoqa.com/select-menu");
-        //1.dropdown i diger elementler gibi locate ediyoruz
+
+        //1.dropdownu diger elementler gibi locate ediyoruz
 
         WebElement dropdownElement= driver.findElement(By.cssSelector("#oldSelectMenu"));
 
@@ -40,6 +41,7 @@ public class Drop_Down_Select {
         Select selectMenu=new Select(dropdownElement);
 
         //Secilen ilk elementi test edelim
+
         String expectedOption="Red";
 
         String actualOption= selectMenu.getFirstSelectedOption().getText();
@@ -50,6 +52,7 @@ public class Drop_Down_Select {
 
         //**************************************************
         Thread.sleep(2000);
+
         selectMenu.selectByVisibleText("Black");
 
         expectedOption="Black";
@@ -69,6 +72,8 @@ public class Drop_Down_Select {
         System.out.println("actualOption = " + actualOption);
 
         Assert.assertEquals(actualOption,expectedOption,"FAIL");
+
+
 
         //**********************************************************
 

@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day_9_WebElements_3;
+package com.krafttechnologie.tests.day9_WebElements_3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -46,6 +46,7 @@ public class DropDownWithNoSelect {
         //asmak icin  Event Listeners dan blur altindaki ogeler remove edilir.
 
         dropdownMenu.click();
+
         WebElement group2option1= driver.findElement(By.cssSelector("#react-select-2-option-1-0"));
         group2option1.click();
 
