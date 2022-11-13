@@ -12,6 +12,18 @@ import utulities.WebDriverFactory;
 
 public class Drop_Down_Select {
 
+    /**
+
+     Dropdown:
+     Özel bir webelement. İletişim kurmak zor.
+     Select() methodu ile manipüle edilir.
+     Eğer ilgili dropdown locate edildiğinde 'tag' olarak 'select' ifadesini görüyorsak
+     Select() classını ve onun sahip olduğu methodları kullanacağız.
+
+     select.selectByIndex(INTEGER);
+     select.selectByVisibleText(STRING);
+     */
+
     WebDriver driver;
 
     @BeforeMethod
@@ -30,6 +42,7 @@ public class Drop_Down_Select {
     }
     @Test
     public void test() throws InterruptedException {
+
         driver.get("https://demoqa.com/select-menu");
 
         //1.dropdownu diger elementler gibi locate ediyoruz

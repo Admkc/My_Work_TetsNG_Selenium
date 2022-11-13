@@ -11,6 +11,13 @@ import utulities.WebDriverFactory;
 import java.util.Set;
 
 public class MultipleWindows {
+    /**
+
+     MULTIPLE WINDOWS
+     getWindowHandle();
+     getWindowHandles();
+     driver.switchTo().window(windowHandle);
+     */
 
     WebDriver driver;
 

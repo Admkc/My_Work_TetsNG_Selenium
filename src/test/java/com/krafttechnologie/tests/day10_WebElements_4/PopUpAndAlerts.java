@@ -1,5 +1,6 @@
 package com.krafttechnologie.tests.day10_WebElements_4;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,15 @@ import org.testng.annotations.Test;
 import utulities.WebDriverFactory;
 
 public class PopUpAndAlerts {
+  /**  POP-UPS
+1. Inspect edebiliyorsak normal devam.
+            2. JS POP-UP --Alert class--
+            3. Chrome Notification --özel bir kütüphane lazım--
+
+    Alert alert = driver.switchTo().alert();
+   alert.accept() --> OK
+   alert.dismiss() --> Cancel
+   alert.sendKeys("String") --> kutucuğa text gönderme*/
 
     WebDriver driver;
 
@@ -25,10 +35,12 @@ public class PopUpAndAlerts {
     }
     @Test
     public void PopUp() throws InterruptedException {
+
         driver.get("http://primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=73437");
 
         //click the confirm button
         driver.findElement(By.xpath("(//span[text()='Confirm'])[1]")).click();
+
         //click 'Yes'
         driver.findElement(By.xpath("(//span[text()='Yes'])[2]")).click();
 
@@ -41,11 +53,45 @@ public class PopUpAndAlerts {
         Assert.assertEquals(actualMessage.getText(),expectedMessage);
 
     }
+
     @Test
-    public void jsAlert(){
+    public void jsAlerts() throws InterruptedException {
+
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+        Thread.sleep(1000);
+
+        //e.g.:1 click - Click For JS Alert Button
+        driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
+
+        // switch to JS alert pop up
+        Alert alert=driver.switchTo().alert();
+        Thread.sleep(2000);
+        //click OK
+        alert.accept();
+
+
+        //e.g:2 click - Click For JS Confirm
+        driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
+        Thread.sleep(2000);
+        //click CANCEL
+        alert.dismiss();
+
+        //e.g.:1 click - Click for JS Prompt
+        driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
+        Thread.sleep(2000);
+        //send keys to JS Prompt
+        Thread.sleep(4000);
+        alert.sendKeys("KraftTech Batch 2 was here");
+
+        System.out.println("alert.getText() = " + alert.getText());
+        alert.accept();
+
+        //Task : verify all result above JS Alerts
+
+    }
+
     }
 
 
 
-}
+

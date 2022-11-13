@@ -50,27 +50,5 @@ public class Drop_Down_Practice_3 {
         blueBtn.click();
 
 
-
-        /**
-
-        driver.get("http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
-
-        List<WebElement> radioButtons= driver.findElements(By.xpath("//input[@type='radio'] [@name='color']"));
-        System.out.println("radioButtons.size() = " + radioButtons.size());
-         radioButtons.get(2).click();
-         Thread.sleep(3000);
-        for (WebElement radio: radioButtons){
-            System.out.println("radio.getText() = " + radio.getAttribute("value"));
-        }
-        WebElement blue= driver.findElement(By.xpath("//input[@value='blue']"));
-        blue.click();
-         */
-
-
-
-
-
-
-
     }
 }

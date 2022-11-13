@@ -10,7 +10,11 @@ import utulities.WebDriverFactory;
 
 public class getAttribute {
 
-    // attribute value sunu getirir.
+    /**
+     getAttribute();
+     1. locator.getAttribute("attributeAdı") --> herhangi bir attribute değerini bulma,
+     2. locator.getAttribute("outerHTML") --> ilgili elementin html karşılığını alma.
+     */
     WebDriver driver;
 
     @BeforeMethod

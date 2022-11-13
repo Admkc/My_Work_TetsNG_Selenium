@@ -13,6 +13,12 @@ import java.util.List;
 
 public class listOfElements {
 
+    /**
+     findElements();
+     Tek bir locator ile birden çok elementi locate edebilme.
+     ArrayList<WebElement> elements = driver.findElements(By...)
+     */
+
     WebDriver driver;
 
     @BeforeMethod

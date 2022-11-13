@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utulities.WebDriverFactory;
 
-public class GetAttibute {
+public class GetAttribute {
     public static void main(String[] args) throws InterruptedException {
 
 

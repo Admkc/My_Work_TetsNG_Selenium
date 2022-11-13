@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AhmetHocatestNg {
+public class AhmetHoca1 {
 
     /* task: 1   //test 1  de yapıldı
      1.	https://www.krafttechexlab.com/Links to an external site. sayfasina git

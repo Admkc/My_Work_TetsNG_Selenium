@@ -34,14 +34,14 @@ public class Drop_Down_Practice_2 {
 
         driver.get("http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
 
-//        WebElement option3Btn=driver.findElement(By.xpath("//input[@value='option-3']"));
-//        option3Btn.click();
-//
-//        WebElement option1Btn=driver.findElement(By.xpath("//input[@value='option-1']"));
-//        option1Btn.click();
-//
-//        WebElement option4Btn= driver.findElement(By.cssSelector("input[value='option-4']"));
-//        option4Btn.click();
+        WebElement option3Btn=driver.findElement(By.xpath("//input[@value='option-3']"));
+        option3Btn.click();
+
+        WebElement option1Btn=driver.findElement(By.xpath("//input[@value='option-1']"));
+        option1Btn.click();
+
+        WebElement option4Btn= driver.findElement(By.cssSelector("input[value='option-4']"));
+        option4Btn.click();
 
         //**************************************************************************************
 

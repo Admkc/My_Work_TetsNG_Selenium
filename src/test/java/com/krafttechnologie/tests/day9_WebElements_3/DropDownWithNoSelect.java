@@ -25,6 +25,7 @@ public class DropDownWithNoSelect {
 
     @Test
     public void test() throws InterruptedException {
+
         driver.get("https://demoqa.com/select-menu");
 
 
@@ -42,7 +43,7 @@ public class DropDownWithNoSelect {
         Assert.assertEquals(actualOption,expectedOption,"FAIL");
 
         //Dropdown icerisinde Group 2 option 1 secenegini cagiralim
-        //Buradaki sorunn inspect yapilmak istenildiginde menu gizleniyor. Bu sorunu
+        //Buradaki sorun inspect yapilmak istenildiginde menu gizleniyor. Bu sorunu
         //asmak icin  Event Listeners dan blur altindaki ogeler remove edilir.
 
         dropdownMenu.click();
@@ -51,7 +52,7 @@ public class DropDownWithNoSelect {
         group2option1.click();
 
         //group 2 option secildikten sonra verify etmek icin tekrar locate ediyoruz.
-        //Group 2 Option1 secildikten sonra veify etmek icin tekrar locate diyoruz.
+        //Group 2 Option1 secildikten sonra verify etmek icin tekrar locate diyoruz.
 
         WebElement selectedOption=driver.findElement(By.xpath("//div[@class=' css-1uccc91-singleValue']"));
 
