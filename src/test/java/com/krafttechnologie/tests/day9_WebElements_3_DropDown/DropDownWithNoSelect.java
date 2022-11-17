@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day9_WebElements_3;
+package com.krafttechnologie.tests.day9_WebElements_3_DropDown;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +10,11 @@ import org.testng.annotations.Test;
 import utulities.WebDriverFactory;
 
 public class DropDownWithNoSelect {
+
+    /**
+     * Buradaki sorun inspect yapilmak istenildiginde menu gizleniyor. Bu sorunu
+     asmak icin  Event Listeners dan blur altindaki ogeler remove edilir.
+     */
 
     WebDriver driver;
     @BeforeMethod

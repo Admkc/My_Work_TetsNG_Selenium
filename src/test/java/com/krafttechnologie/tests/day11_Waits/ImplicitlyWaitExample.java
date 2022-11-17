@@ -15,19 +15,19 @@ public class ImplicitlyWaitExample {
 
 
     /**
-     * Dynamic Waits
-    Selenium --> NoSuchelementException'ın şifası, bir defa yazılır,
-      ondan sonraki bütün element locate etme satırlarında geçerlidir.
+     * Dynamic Wait
+      Selenium --> NoSuchelementException'ın şifası, bir defa yazılır,
+     implicitly wait her find element öncesi calısır.
 
      *bir objeye ulaşmaya çalışırken bu obje eğer sayfada henüz yüklenmemişse WebDriver’a Dom’a
      sorgu yapması için bir zaman vererek bulmasını sağlarız.
 
      *İmplicit wait  tüm objelere uygulanır ve belirtilen süre içerisinde bu objeyi aramaya devam eder,
-     * bulunmasını istediğimiz obje için ExpectedConditions belitmek zorunda DEGİLİZ.
+      bulunmasını istediğimiz obje için ExpectedConditions belitmek zorunda DEGİLİZ.
 
      *web sürücüsüne “No Such Element Exception” oluşturmadan önce belirli bir süre beklemesini söylemek için kullanılır
      * driver.manage().timeouts().implicitlyWait(7,TimeUnit.SECONDS)
-     implicitly wait her find element öncesi calısır.
+
 
      --web element process gerceklestikten sonra görülür
      --before methotta calisir
@@ -40,7 +40,9 @@ public class ImplicitlyWaitExample {
     public void setUp() {
 
         driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+        driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+
         //driver.manage().window().maximize();
     }
 

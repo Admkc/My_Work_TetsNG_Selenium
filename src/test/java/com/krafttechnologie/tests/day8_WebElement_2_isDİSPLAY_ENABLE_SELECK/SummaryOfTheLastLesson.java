@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day8_WebElement_2;
+package com.krafttechnologie.tests.day8_WebElement_2_isDİSPLAY_ENABLE_SELECK;
 
 import org.testng.Assert;
 import org.testng.annotations.*;

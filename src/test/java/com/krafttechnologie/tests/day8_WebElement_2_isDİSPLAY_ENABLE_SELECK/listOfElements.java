@@ -1,6 +1,5 @@
-package com.krafttechnologie.tests.day8_WebElement_2;
+package com.krafttechnologie.tests.day8_WebElement_2_isDİSPLAY_ENABLE_SELECK;
 
-import com.github.dockerjava.api.model.Link;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,40 +11,42 @@ import utulities.WebDriverFactory;
 
 import java.util.List;
 
-public class karalama {
+public class listOfElements {
+
+    /**
+     findElements();
+     Tek bir locator ile birden çok elementi locate edebilme.
+     **Ortak attribute ve value sahip elementleri bir liste halinde locate etmemize yarar
+     ArrayList<WebElement> elements = driver.findElements(By...)
+     */
 
     WebDriver driver;
 
     @BeforeMethod
     public void setUp(){
+
         driver= WebDriverFactory.getDriver("chrome");
-
         driver.manage().window().maximize();
-
     }
     @AfterMethod
     public void tearDown(){
+
+
         driver.close();
     }
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
         driver.get("https://www.krafttechexlab.com/javascript/clicks");
-
         List<WebElement> buttons=driver.findElements(By.xpath("//button[@class='btn btn-primary']"));
-
         System.out.println("buttons.size() = " + buttons.size());
         Assert.assertEquals(buttons.size(),4);
 
-        for (WebElement btn:buttons){
-            System.out.println("btn.getText() = " + btn.getText());
-            System.out.println("btn.isDisplayed() = " + btn.isDisplayed());
+        for(WebElement button:buttons){
+            System.out.println("button.getText() = " + button.getText());
+            System.out.println("button.isDisplayed() = " + button.isDisplayed());
         }
 
-
-
-
-
+        Thread.sleep(3000);
+        buttons.get(2).click();
     }
-
-
 }

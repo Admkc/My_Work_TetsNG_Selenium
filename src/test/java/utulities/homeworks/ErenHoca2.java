@@ -28,7 +28,7 @@ public class ErenHoca2 {
 
      TEST :2
      1. "https://www.krafttechexlab.com/" sitesine git.
-     2. 'Forms' altındaki Checkbox butonunun displayed olmadığı doğrula.
+     2. 'Forms' altındaki Checkbox butonunun displayed olmadığını doğrula.
      3. Forms'a tıkla.
      4. Forms' altındaki Checkbox butonunun displayed olduğunu doğrula.
      5. 'Checkbox' butonuna tıkla.

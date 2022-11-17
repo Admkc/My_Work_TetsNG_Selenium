@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day8_WebElement_2;
+package com.krafttechnologie.tests.day8_WebElement_2_isDİSPLAY_ENABLE_SELECK;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +11,10 @@ import utulities.WebDriverFactory;
 
 public class isEnabled {
 
-    // element kullanıp kullanılmadıgı,etkin olup olmadıgı
+    /**
+     * elementin kullanıp kullanılmadıgı,etkin olup olmadıgı
+
+     */
 
     WebDriver driver;
 

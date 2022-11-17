@@ -81,16 +81,24 @@ public class AhmetHoca2 {
 
 
 
-        WebElement dropkutu = driver.findElement(By.xpath("(//button[@aria-label='Toggle'])[1]"));
+        WebElement deskkutu = driver.findElement(By.xpath("(//button[@type='button'])[5]"));
 
-        dropkutu.click();
+        deskkutu.click();
+        Thread.sleep(1000);
 
-        Thread.sleep(3000);
+        Assert.assertTrue(deskkutu.isSelected());
 
-     //   WebElement deskKutu=driver.findElement(By.xpath("(//button[@aria-label='Toggle'])[4]"));
-     //   dropkutu.click();
+        WebElement downKutu=driver.findElement(By.xpath("(//button[@type='button'])[7]"));
 
-        Thread.sleep(2000);
+        downKutu.click();
+
+        Assert.assertTrue(downKutu.isSelected());
+        Thread.sleep(1000);
+
+
+
+
+
     }
 
     @Test

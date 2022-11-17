@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day8_WebElement_2;
+package com.krafttechnologie.tests.day8_WebElement_2_isDİSPLAY_ENABLE_SELECK;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +10,10 @@ import org.testng.annotations.Test;
 import utulities.WebDriverFactory;
 
 public class isSelectedRadioButton {
+    /**
+     RadioButton iki yada daha fazla seçenek içinde bir seçim yapmayı sağlayan kontroldür.
+     Örneğin Cinsiyet sorulduğunda iki seçenekten birinin seçilmesi gerekir ...
+     */
 
     WebDriver driver;
 

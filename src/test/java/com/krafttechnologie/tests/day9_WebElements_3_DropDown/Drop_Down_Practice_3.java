@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day9_WebElements_3;
+package com.krafttechnologie.tests.day9_WebElements_3_DropDown;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

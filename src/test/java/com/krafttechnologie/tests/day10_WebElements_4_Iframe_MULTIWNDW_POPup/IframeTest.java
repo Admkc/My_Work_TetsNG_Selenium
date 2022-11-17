@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day10_WebElements_4;
+package com.krafttechnologie.tests.day10_WebElements_4_Iframe_MULTIWNDW_POPup;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +11,12 @@ import utulities.WebDriverFactory;
 public class IframeTest {
     /**
      Frames  HTML İÇİNDE HTML
+     Frames kullanarak HTML'nin içine koyabiliriz.
+     Frame varsa, selenyum frame içinde ne olduğunu kontrol edemez.
+     Önce iframe'i değiştirmeliyiz.
+     iframe'e geçtiğimizde, selenium biz geri değiştirene kadar default/varsayılan sayfayı göremez,
+     Bir seferde sadece bir frame değiştirebiliriz ve torunlara doğrudan geçilmez.
+     kardeş/sibling arası geçiş/switch olmaz sadece ebeveynden çocuğa/parentchild.
 
      Parent To child
      driver.switchTo().frame(...)
@@ -38,6 +44,7 @@ public class IframeTest {
     public void tearDown(){
         driver.close();
     }
+
     @Test
     public void iframe() throws InterruptedException {
 
@@ -106,8 +113,32 @@ public class IframeTest {
         driver.switchTo().frame("frame-bottom");
         System.out.println("driver.findElement(By.tagName(\"Body\")).getText() = "
                 + driver.findElement(By.tagName("Body")).getText());
+
+
     }
 
+    @Test
+    public void testPratic() throws InterruptedException {
 
-}
+        driver.get("https://www.krafttechexlab.com/components/iframe");
+
+        WebElement iframe= driver.findElement(By.tagName("iframe"));
+
+        driver.switchTo().frame(iframe);
+        Thread.sleep(2000);
+
+        WebElement box=driver.findElement(By.xpath("(//button[@class='btn-close btn-close-white'])[1]"));
+        box.click();
+
+        driver.switchTo().defaultContent();
+
+        WebElement title= driver.findElement(By.xpath("//h1[.='Iframe']"));
+
+        System.out.println("title.getText() = " + title.getText());
+        Thread.sleep(2000);
+
+
+    }
+    }
+
 

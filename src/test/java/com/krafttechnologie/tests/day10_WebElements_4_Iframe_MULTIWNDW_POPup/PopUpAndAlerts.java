@@ -1,4 +1,4 @@
-package com.krafttechnologie.tests.day10_WebElements_4;
+package com.krafttechnologie.tests.day10_WebElements_4_Iframe_MULTIWNDW_POPup;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -12,9 +12,15 @@ import utulities.WebDriverFactory;
 
 public class PopUpAndAlerts {
   /**  POP-UPS
-1. Inspect edebiliyorsak normal devam.
-            2. JS POP-UP --Alert class--
-            3. Chrome Notification --özel bir kütüphane lazım--
+   * Yapılarına göre 2 farklı pop up handle etme yolu var.
+   * HTML pop Ups
+    pop up HTML de ise - yani inspect/incele yapalabiliyorsa normal usullerle LOCATE edilir.
+
+   * Javascript Alerts
+    Javascript kaynaklıdır ve js alerts olarak bilinir.-özel bir kütüphane lazım--
+   * Inspect/İncele yapılamaz, ( üstünde click vs. olmaz)
+   * JS Alerts için Alert class (Seleniumdan) kullanılır
+
 
     Alert alert = driver.switchTo().alert();
    alert.accept() --> OK

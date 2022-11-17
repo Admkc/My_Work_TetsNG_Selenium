@@ -9,10 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class OpenBrowser {
     public static void main(String[] args) {
-        /*
+        /**
         1- pom xml e yukledigimiz  webdrivermanager kütüphanesinden chromu hazır hale getirmesini isteyecegiz.
         2-Web driver clasından driver ı hazır hale getirmesini isteyecegiz.
         3-nesneme testini yapacagımız web sayfasına beni goturmesini isteyecegiz.
+
+         Web driver =komutları kabul eden ve bunları bir tarayıcıya gönderen bir tarayıcı otomasyon çerçevesidir.
 
          */
 
